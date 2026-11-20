@@ -111,7 +111,7 @@ Akses aplikasi Web pada peramban di `http://localhost:8080/`.
 ### 📱 Android (`androidApp`)
 | List Movies | Search Movies | Detail Movie |
 | :---: | :---: | :---: |
-| <img src="result/android/listMovies.jpeg" width="180" alt="Android List" /> | <img src="result/android/searchMovies.jpeg" width="180" alt="Android Search" /> | <img src="result/android/detailMovie.jpeg" width="180" alt="Android Detail" /> |
+| <img alt="Android List" src="result/android/listMovies.jpeg" width="180"/> | <img src="result/android/searchMovies.jpeg" width="180" alt="Android Search" /> | <img src="result/android/detailMovie.jpeg" width="180" alt="Android Detail" /> |
 
 ---
 

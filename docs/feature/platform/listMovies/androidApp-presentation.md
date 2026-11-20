@@ -14,7 +14,7 @@ Dokumen ini menjelaskan arsitektur dan spesifikasi implementasi **UI + ViewModel
 
 ## Desain UI
 
-![Desain Android — List & Detail Film](androidApp-design.png)
+![Desain Android — List & Detail Film](/Users/shofwan/StudioProjects/me/MovieKMP/docs/feature/platform/listMovies/androidApp-design.png)
 ![Desain Android — Search Movies](androidApp-designSearch.png)
 
 > Desain ini adalah **acuan visual UI**:
