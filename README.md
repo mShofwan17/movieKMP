@@ -111,28 +111,28 @@ Akses aplikasi Web pada peramban di `http://localhost:8080/`.
 ### 📱 Android (`androidApp`)
 | List Movies | Search Movies | Detail Movie |
 | :---: | :---: | :---: |
-| ![Android List](result/android/listMovies.jpeg) | ![Android Search](result/android/searchMovies.jpeg) | ![Android Detail](result/android/detailMovie.jpeg) |
+| <img src="result/android/listMovies.jpeg" width="180" alt="Android List" /> | <img src="result/android/searchMovies.jpeg" width="180" alt="Android Search" /> | <img src="result/android/detailMovie.jpeg" width="180" alt="Android Detail" /> |
 
 ---
 
 ### 🖥️ Desktop (`desktopApp`)
 | List Movies | Search Movies | Detail Movie |
 | :---: | :---: | :---: |
-| ![Desktop List](result/desktop/listMovies.png) | ![Desktop Search](result/desktop/searchMovies.png) | ![Desktop Detail](result/desktop/detailMovie.png) |
+| <img src="result/desktop/listMovies.png" width="260" alt="Desktop List" /> | <img src="result/desktop/searchMovies.png" width="260" alt="Desktop Search" /> | <img src="result/desktop/detailMovie.png" width="260" alt="Desktop Detail" /> |
 
 ---
 
 ### 🍎 iOS (`iosApp`)
 | List Movies | Search Movies | Detail Movie |
 | :---: | :---: | :---: |
-| ![iOS List](result/ios/listMovies.PNG) | ![iOS Search](result/ios/searchMovies.PNG) | ![iOS Detail](result/ios/detailMovies.PNG) |
+| <img src="result/ios/listMovies.PNG" width="180" alt="iOS List" /> | <img src="result/ios/searchMovies.PNG" width="180" alt="iOS Search" /> | <img src="result/ios/detailMovies.PNG" width="180" alt="iOS Detail" /> |
 
 ---
 
 ### 🌐 Web (`webApp`)
 | List Movies | Search Movies | Detail Movie |
 | :---: | :---: | :---: |
-| ![Web List](result/web/listMovies.png) | ![Web Search](result/web/searchMovies.png) | ![Web Detail](result/web/detailMovie.png) |
+| <img src="result/web/listMovies.png" width="260" alt="Web List" /> | <img src="result/web/searchMovies.png" width="260" alt="Web Search" /> | <img src="result/web/detailMovie.png" width="260" alt="Web Detail" /> |
 
 ---
 
