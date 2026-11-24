@@ -1,18 +1,28 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { useMovieList } from '../hooks/useMovieList.ts';
 
 export function MovieListScreen({ onMovieSelect }: { onMovieSelect: (imdbId: string) => void }) {
-  const { query, setQuery, movies, isLoading, isPaging, error, search, loadNextPage } = useMovieList();
+  const { query, setQuery, movies, isLoading, isPaging, canPaginate, error, search, loadNextPage } = useMovieList();
+  const observerTarget = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 400) {
-        loadNextPage();
-      }
+    const element = observerTarget.current;
+    if (!element) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && !isLoading && !isPaging && canPaginate) {
+          loadNextPage();
+        }
+      },
+      { threshold: 0.1, rootMargin: '200px' }
+    );
+
+    observer.observe(element);
+    return () => {
+      if (element) observer.unobserve(element);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [loadNextPage]);
+  }, [loadNextPage, isLoading, isPaging, canPaginate]);
 
   return (
     <div>
@@ -43,9 +53,9 @@ export function MovieListScreen({ onMovieSelect }: { onMovieSelect: (imdbId: str
         )}
 
         <div className="movie-grid">
-          {movies.map((movie) => (
+          {movies.map((movie, index) => (
             <div
-              key={movie.imdbId}
+              key={`${movie.imdbId}-${index}`}
               className="movie-card"
               onClick={() => onMovieSelect(movie.imdbId)}
             >
@@ -67,6 +77,9 @@ export function MovieListScreen({ onMovieSelect }: { onMovieSelect: (imdbId: str
             Memuat halaman berikutnya...
           </div>
         )}
+
+        {/* Sentinel element for IntersectionObserver infinite scrolling */}
+        <div ref={observerTarget} style={{ height: '20px', width: '100%' }} />
       </main>
     </div>
   );
