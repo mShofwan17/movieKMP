@@ -4,6 +4,7 @@
 **/build/
 xcuserdata
 !src/**/build/
+!sharedLogic/build/dist/js/developmentLibrary/**
 local.properties
 .idea
 .DS_Store

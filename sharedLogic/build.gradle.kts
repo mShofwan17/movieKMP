@@ -101,7 +101,7 @@ val generateSecretConfigTask = tasks.register("generateSecretConfig") {
     val localPropertiesFile = rootProject.file("local.properties")
     val outputDir = file("src/commonMain/kotlin/me/test/project/moviekmp/core/config")
 
-    inputs.file(localPropertiesFile)
+    inputs.file(localPropertiesFile).optional()
     outputs.dir(outputDir)
 
     doLast {
@@ -111,8 +111,12 @@ val generateSecretConfigTask = tasks.register("generateSecretConfig") {
             }
         }
 
-        val baseUrl = properties.getProperty("BASE_URL")
-        val apiKey = properties.getProperty("MOVIE_API_KEY")
+        val baseUrl = (properties.getProperty("BASE_URL") ?: System.getenv("BASE_URL")).orEmpty().ifBlank {
+            error("Properti 'BASE_URL' tidak ditemukan di local.properties maupun Environment Variables!")
+        }
+        val apiKey = (properties.getProperty("MOVIE_API_KEY") ?: System.getenv("MOVIE_API_KEY")).orEmpty().ifBlank {
+            error("Properti 'MOVIE_API_KEY' tidak ditemukan di local.properties maupun Environment Variables!")
+        }
         val maskKey: Byte = 0x5A.toByte()
 
         fun String.toObfuscatedByteArrayString(): String {
