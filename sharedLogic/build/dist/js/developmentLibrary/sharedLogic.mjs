@@ -138,7 +138,7 @@ class SecretConfig {
     $this.MASK_KEY_1 = 90;
     var tmp = $this;
     // Inline function 'kotlin.byteArrayOf' call
-    tmp.OBFUSCATED_BASE_URL_1 = new Int8Array([50, 46, 46, 42, 41, 96, 117, 117, 45, 45, 45, 116, 53, 55, 62, 56, 59, 42, 51, 116, 57, 53, 55, 117]);
+    tmp.OBFUSCATED_BASE_URL_1 = new Int8Array([50, 46, 46, 42, 41, 96, 117, 117, 45, 45, 45, 116, 53, 55, 62, 56, 59, 42, 51, 116, 57, 53, 55]);
     var tmp_0 = $this;
     // Inline function 'kotlin.byteArrayOf' call
     tmp_0.OBFUSCATED_MOVIE_API_KEY_1 = new Int8Array([110, 98, 63, 99, 59, 111, 111, 109]);
