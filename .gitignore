@@ -5,6 +5,16 @@
 xcuserdata
 !src/**/build/
 !sharedLogic/build/dist/js/developmentLibrary/**
+**/build/
+xcuserdata
+!src/**/build/
+!sharedLogic/build/
+sharedLogic/build/*
+!sharedLogic/build/dist/
+sharedLogic/build/dist/*
+!sharedLogic/build/dist/js/
+sharedLogic/build/dist/js/*
+!sharedLogic/build/dist/js/developmentLibrary/
 local.properties
 .idea
 .DS_Store
@@ -18,5 +28,4 @@ captures
 !*.xcworkspace/contents.xcworkspacedata
 **/xcshareddata/WorkspaceSettings.xcsettings
 node_modules/
-local.properties
 docs/
