@@ -42,6 +42,7 @@ import {
   KProperty1ca4yb4wlo496 as KProperty1,
   getPropertyCallableRef3hckxc0xueiaj as getPropertyCallableRef,
   lazy2hsh8ze7j6ikd as lazy_0,
+  endsWith3cq61xxngobwh as endsWith,
 } from './kotlin-kotlin-stdlib.mjs';
 import {
   named1qn5s3wnxjwbv as named,
@@ -87,8 +88,6 @@ import {
 } from './ktor-ktor-client-ktor-client-plugins-ktor-client-logging.mjs';
 import {
   HttpHeaders_getInstance1avhj7ffsen7f as HttpHeaders_getInstance,
-  Application_getInstance3vhi2qmce4cj0 as Application_getInstance,
-  contentType1lwcfjsjo0z8g as contentType,
   Companion_getInstance29j9s2wnmk34z as Companion_getInstance_2,
   isSuccess1pokn37fdu56v as isSuccess,
 } from './ktor-ktor-http.mjs';
@@ -2725,7 +2724,6 @@ function provideHttpClient$lambda$lambda$lambda(it) {
 function provideHttpClient$lambda$lambda_2($this$defaultRequest) {
   _init_properties_HttpClient_kt__huy6s3();
   $this$defaultRequest.url_chgr8b_k$(get_BASE_URL());
-  contentType($this$defaultRequest, Application_getInstance().get_Json_wo4ci9_k$());
   return Unit_getInstance();
 }
 function provideHttpClient$lambda($enableLogging) {
@@ -3051,7 +3049,9 @@ var properties_initialized_HttpClientUrl_js_kt_vq4wgz;
 function _init_properties_HttpClientUrl_js_kt__phso2t() {
   if (!properties_initialized_HttpClientUrl_js_kt_vq4wgz) {
     properties_initialized_HttpClientUrl_js_kt_vq4wgz = true;
-    BASE_URL = SecretConfig_getInstance().get_baseUrl_48hdl7_k$();
+    // Inline function 'kotlin.let' call
+    var it = SecretConfig_getInstance().get_baseUrl_48hdl7_k$();
+    BASE_URL = endsWith(it, '/') ? it : it + '/';
   }
 }
 function providePlatformHttpClientEngine() {
