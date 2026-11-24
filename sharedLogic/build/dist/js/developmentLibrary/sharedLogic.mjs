@@ -3043,9 +3043,17 @@ function KmpFactory_getInstance() {
   return KmpFactory_instance;
 }
 function get_BASE_URL() {
+  _init_properties_HttpClientUrl_js_kt__phso2t();
   return BASE_URL;
 }
 var BASE_URL;
+var properties_initialized_HttpClientUrl_js_kt_vq4wgz;
+function _init_properties_HttpClientUrl_js_kt__phso2t() {
+  if (!properties_initialized_HttpClientUrl_js_kt_vq4wgz) {
+    properties_initialized_HttpClientUrl_js_kt_vq4wgz = true;
+    BASE_URL = SecretConfig_getInstance().get_baseUrl_48hdl7_k$();
+  }
+}
 function providePlatformHttpClientEngine() {
   return Js_getInstance().create$default_3xwi5e_k$();
 }
@@ -3099,7 +3107,6 @@ initMetadataForObject(KmpFactory, 'KmpFactory');
 //endregion
 //region block: init
 ioDispatcher = 'ioDispatcher';
-BASE_URL = '/api/';
 //endregion
 //region block: exports
 KmpFactory.getInstance = KmpFactory_getInstance;
